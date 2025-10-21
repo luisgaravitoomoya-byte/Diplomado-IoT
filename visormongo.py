@@ -16,7 +16,7 @@ def fetch_and_display_data():
     """
     client = None 
     try:
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] 🔎 Conectando a MongoDB Atlas...")
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] Conectando a MongoDB Atlas...")
         client = pymongo.MongoClient(MONGO_URI)
         db = client[DB_NAME]
         collection = db[COLLECTION_NAME]
@@ -29,7 +29,7 @@ def fetch_and_display_data():
             print("--------------------------------------------------")
             return
             
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] ✅ Conexión exitosa. Se recuperaron {len(documents)} alertas.")
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] Conexión exitosa. Se recuperaron {len(documents)} alertas.")
 
         data_for_df = []
         for doc in documents:
