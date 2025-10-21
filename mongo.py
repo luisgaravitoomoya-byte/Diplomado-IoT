@@ -8,14 +8,14 @@ import sys
 
 
 # CONFIGURACIÓN MQTT SEGURA 
-MQTT_BROKER = "33882d7d491e471ab755cad33c886d4a.s1.eu.hivemq.cloud" 
+MQTT_BROKER = "URL Hivemq" 
 MQTT_PORT = 8883
 MQTT_TOPIC = "rastreador/alerta/caida" 
-MQTT_USERNAME = "canelita" 
-MQTT_PASSWORD = "Canelita123" 
+MQTT_USERNAME = "usuario" 
+MQTT_PASSWORD = "contraseña" 
 
 #CONFIGURACIÓN DE MONGODB ATLAS
-MONGO_URI = "mongodb+srv://canelita:1234@gps.4npa1tv.mongodb.net/?retryWrites=true&w=majority&appName=GPS"
+MONGO_URI = "URI mongoDb"
 DB_NAME = "GPS" 
 COLLECTION_NAME = "fall_alerts" 
 
