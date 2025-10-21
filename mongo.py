@@ -42,23 +42,23 @@ def setup_mongodb():
         db_collection = db[COLLECTION_NAME]
         _ = db.name 
         
-        print(f"[MONGO] ✅ Conectado. Base de datos: {DB_NAME}. Colección: {COLLECTION_NAME}")
+        print(f"[MONGO] Conectado. Base de datos: {DB_NAME}. Colección: {COLLECTION_NAME}")
     except Exception as e:
-        print(f"[MONGO] ❌ ERROR al conectar a MongoDB. ¿Es correcta la IP en Network Access de Atlas? Error: {e}")
+        print(f"[MONGO] ERROR al conectar a MongoDB. ¿Es correcta la IP en Network Access de Atlas? Error: {e}")
         sys.exit(1)
 
 
 def on_connect(client, userdata, flags, rc):
     """Función que se llama al establecer la conexión MQTT."""
     if rc == 0:
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] ✅ Conectado al broker seguro: {MQTT_BROKER}")
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] Conectado al broker seguro: {MQTT_BROKER}")
         client.subscribe(MQTT_TOPIC)
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Escuchando en el tópico: {MQTT_TOPIC}")
         print("-" * 50)
         print("Esperando alertas de caída...")
         print("-" * 50)
     else:
-        print(f"[MQTT] ❌ Fallo en la conexión. Código de retorno: {rc}")
+        print(f"[MQTT] Fallo en la conexión. Código de retorno: {rc}")
 
 def log_to_local_json(document):
     """Guarda el documento de alerta en un archivo JSON local (formato JSON Lines)."""
@@ -77,7 +77,7 @@ def log_to_local_json(document):
             f.write(json_line + '\n')
             
         local_time = datetime.now() + timedelta(hours=TIMEZONE_OFFSET_HOURS)
-        print(f"[{local_time.strftime('%H:%M:%S -4')}] 📝 Guardado en log local: {LOCAL_LOG_FILE}")
+        print(f"[{local_time.strftime('%H:%M:%S -4')}] Guardado en log local: {LOCAL_LOG_FILE}")
         
     except Exception as e:
         print(f"[ERROR] Fallo al escribir en el log local: {e}")
@@ -110,7 +110,7 @@ def on_message(client, userdata, msg):
             lat = document['location'].get('lat') if document['location'] else 'N/A'
             lon = document['location'].get('lon') if document['location'] else 'N/A'
             
-            print(f"[{local_time.strftime('%H:%M:%S -4')}] 💾 Guardado (ID: {result.inserted_id}) | Impacto: {document['impact_G']:.2f} G | Ubicación: {lat}, {lon}")
+            print(f"[{local_time.strftime('%H:%M:%S -4')}] Guardado (ID: {result.inserted_id}) | Impacto: {document['impact_G']:.2f} G | Ubicación: {lat}, {lon}")
         else:
             print("[MONGO] ADVERTENCIA: Colección no disponible para guardar datos.")
         log_to_local_json(document)
