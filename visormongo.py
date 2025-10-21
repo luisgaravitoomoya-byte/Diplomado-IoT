@@ -4,7 +4,7 @@ import sys
 from datetime import datetime 
 
 
-MONGO_URI = "mongodb+srv://canelita:1234@gps.4npa1tv.mongodb.net/?retryWrites=true&w=majority&appName=GPS"
+MONGO_URI = "URI mongoDB"
 DB_NAME = "GPS" 
 COLLECTION_NAME = "fall_alerts" 
 
