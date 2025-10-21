@@ -27,21 +27,21 @@ except ImportError:
 #CONFIGURACIÓN DEL SISTEMA Y CREDENCIALES 
 
 #Credenciales de Wi-Fi
-WIFI_SSID = "HUAWEI P30 lite"        
-WIFI_PASSWORD = "78312beb"
+WIFI_SSID = "red wifi"        
+WIFI_PASSWORD = "contraseña de wifi"
 
 #Credenciales de Ubidots y Make
 HTTP_SERVER = "industrial.api.ubidots.com"
 UBIDOTS_DEVICE_LABEL = "gpspico"
-UBIDOTS_TOKEN = "BBUS-h2GNIFVlyS7FhzA3nwQ90yDdywnCe6" 
+UBIDOTS_TOKEN = "toke de ubidots" 
 HTTP_PUBLISH_URL = f"http://{HTTP_SERVER}/api/v1.6/devices/{UBIDOTS_DEVICE_LABEL}"
 
 #URL DE TU WEBHOOK DE MAKE (Geocerca)
-MAKE_WEBHOOK_URL = "https://hook.us2.make.com/iv4coz08isi7e77uz7e11hlrrs1ds5p3" 
+MAKE_WEBHOOK_URL = "URL de Make" 
 
 #Credenciales de TELEGRAM
-TELEGRAM_BOT_TOKEN = "8422951184:AAHwIM5hZkn2PoOq-iS78fDqhrkplIjUfik" 
-TELEGRAM_CHAT_ID = "-1003137793227" 
+TELEGRAM_BOT_TOKEN = "token de telegram" 
+TELEGRAM_CHAT_ID = "ID del chat de telegram" 
 
 #Configuración de Geocerca
 HOME_LAT = -16.513800  
@@ -70,11 +70,11 @@ my_gps = MicropyGPS(location_formatting='dd')
 
 #CONFIGURACIÓN DEL BROKER PRIVADO MQTT
 
-BROKER_HOST = "33882d7d491e471ab755cad33c886d4a.s1.eu.hivemq.cloud" 
+BROKER_HOST = "URL HiveMW" 
 BROKER_PORT = 8883  
 MQTT_CLIENT_ID = f"pico_w_tracker_{random.getrandbits(16)}" 
-MQTT_USERNAME = "canelita" 
-MQTT_PASSWORD = "Canelita123" 
+MQTT_USERNAME = "usuario" 
+MQTT_PASSWORD = "contraseña" 
 MQTT_TOPIC_FALL = "rastreador/alerta/caida" 
 
 #CONFIGURACIÓN DEL LED DE ESTADO
