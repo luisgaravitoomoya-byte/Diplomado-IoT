@@ -1,6 +1,6 @@
 Este repositorio contiene el firmware para el microPython, los scripts de backend de python y la base de datos
 para desarrollar un dispositivo wearable para detectar caidas y geolocalizar a personas mayores.
-Tambien se presenta el modelo 3D usado para la carcasa del proyecto de un archivo solidworks y el archivo para la placa PCB.
+Tambien se presenta el modelo 3D usado para la carcasa del proyecto de un archivo solidworks, el archivo para la placa PCB y un PDF que muestra las pruebas que se realizaron para el proyecto.
 
 El proyecto opera bajo una arquitectura de Edge Computing y Nube segura.
 Los componentes requeridos son:
