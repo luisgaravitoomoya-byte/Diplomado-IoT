@@ -1,6 +1,6 @@
 Este repositorio contiene el firmware para el microPython, los scripts de backend de python y la base de datos
 para desarrollar un dispositivo wearable para detectar caidas y geolocalizar a personas mayores.
-Tambien se presenta el modelo 3D usado para la carcasa del proyecto y el archivo para la placa PCB.
+Tambien se presenta el modelo 3D usado para la carcasa del proyecto de un archivo solidworks y el archivo para la placa PCB.
 
 El proyecto opera bajo una arquitectura de Edge Computing y Nube segura.
 Los componentes requeridos son:
@@ -36,3 +36,5 @@ pip install paho-mqtt pymongo pandas
 En MongoDb hay que configurar el acceso a la red, esto se realiza asegurando que el acceso este abierto mediante la siguiente IP: 0.0.0.0/0
 
 Actualizar el MONGO_URI de ambos scripts de python.
+
+De igual manera se presenta los planos de los modelos 3D
